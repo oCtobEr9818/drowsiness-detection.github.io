@@ -1,0 +1,5 @@
+.block{
+    /* height: 170px; */
+    background: -webkit-linear-gradient(to right, #22b4be, #c0c0aa);
+    background: linear-gradient(to right, #22b4be, #c0c0aa);
+}

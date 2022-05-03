@@ -1,0 +1,100 @@
+.table-title{
+    text-align: center;
+    margin-bottom: .3em;
+    font-size: 20px;
+    font-family: '標楷體';
+}
+.table{
+    width: 500px;
+    border: 3px double #666;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.table table{
+    width: 100%;
+    border: 3px double #666;
+    background: #fff;
+    border-radius: 10px;
+    cursor: default;
+}
+.table thead{
+    background-color: #333;
+    color: #fff;
+}
+.table thead th:first-child{
+    border-radius: 7px 0 0 0;
+}
+.table thead th:last-child{
+    border-radius: 0 7px 0 0;
+}
+.table tbody tr:hover{
+    background-color: #fcc;
+}
+.table tfoot td:first-child{
+    border-radius: 0 0 0 7px;
+}
+.table tfoot td:last-child{
+    border-radius: 0 0 7px 0;
+}
+.table tfoot:hover{
+    background-color: #fcc;
+}
+.table th{
+    border: 1px solid #666;
+    padding: 10px 0px;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.table .out{
+    width: 0px;
+    height: 0px;
+    border-top: 60px solid #fff;
+    border-left: 160px solid #ccc;
+    position: relative;
+    margin: auto;
+    color: #000;
+}
+.table .out b{
+    font-style: normal;
+    display: block;
+    position: absolute;
+    top: -55px;
+    left: -80px;
+    width: 80px;
+    font-size: 18px;
+}
+.table .out em{
+    font-style: normal;
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -155px;
+    width: 80px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.table td{
+    border: 1px solid #666;
+    padding: 6px 10px;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-align: center;
+}
+.table-txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+}
+.table-txt p{
+    text-align: justify;
+    text-justify: inter-ideograph;
+    line-height: 1.7;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 50px 0 100px 0;
+}

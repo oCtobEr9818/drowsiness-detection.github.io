@@ -1,0 +1,315 @@
+<!-- 首頁 -->
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection System</title>
+    <link rel="icon" href="./static/img/logo.png">
+    <link rel="stylesheet" href="./static/css/home.css">
+    <link rel="stylesheet" href="./static/css/staff.css">
+    <link rel="stylesheet" href="./static/css/introduction.css">
+    <link rel="stylesheet" href="./static/css/contact.css">
+    <link rel="stylesheet" href="./static/css/but_product.css">
+    <link rel="stylesheet" href="./static/css/form.css">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="mainheader" id="header">
+        <div class="container">
+            <a href="" class="logo">
+                <img src="./static/img/logo.png" alt="no image">
+            </a>
+            <nav class="main-nav">
+                <a href="">
+                    <i class="fa fa-home" aria-hidden="true"></i> 首頁
+                </a>
+                <a href="#staff">
+                    <i class="fa fa-user" aria-hidden="true"></i> 人員介紹
+                </a>
+                <a href="#introduction">
+                    <i class="fa fa-car" aria-hidden="true"></i> 產品介紹
+                </a>
+                <a href="#bottom_btn">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i> 購買產品
+                </a>
+                <a href="#staff">
+                    <i class="fa fa-envelope" aria-hidden="true"></i> 聯絡我們
+                </a>
+            </nav>
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </header>
+
+
+    <div class="banner" id="top">
+        <div class="container-banner">
+            <div class="banner-txt">
+                <h1>
+                    疲勞駕駛檢測系統
+                    <small>
+                        Drowsiness Detection System
+                    </small>
+                </h1>
+                <p>此系統目前在測試階段，尚並不完整，若使用此系統前，提醒您開超上路前應先確認精神狀態，祝您行車愉快！</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- staff -->
+    <div class="title-staff">
+        <a href="#bottom"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+        <h2 id="staff">人員介紹</h2>
+    </div>
+    <div class="wrap">
+        <div class="item">
+            <img src='./static/img/yian.jpg'>
+            <div class="txt">
+                <h2>陳奕安</h2>
+                <p> 明志科技大學電子工程系<br>
+                    <strong>電話：</strong>0989278429<br>
+                    <strong>電子郵件：</strong>cv315122@gmail.com
+                </p>
+                <div class="icon">
+                    <p><strong>聯絡我們：</strong></p>
+                    <a href="https://www.instagram.com/anddyan1018/" target="_blank">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100004177388630" target="_blank">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src='./static/img/S__87031819.jpg'>
+            <div class="txt">
+                <h2>蔡昇峻</h2>
+                <p>明志科技大學電子工程系<br>
+                    <strong>電話：</strong>0912345678<br>
+                    <strong>電子郵件：</strong>U06157044@o365.mcut.edu.tw
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src='./static/img/tyhsieh.png'>
+            <div class="txt">
+                <h2>謝滄岩</h2>
+                <p> 副教授兼系主任<br> 中央大學光電所博士
+                    <br>
+                    <strong>辦公室：</strong>電子館213研究室<br>
+                    <strong>電話：</strong>02-2908-9899 分機 4851、4860<br>
+                    <strong>電子郵件：</strong>tyhsieh@mail.mcut.edu.tw<br>
+                    <strong>學術專長：</strong>光電應用、光纖通信高頻電波
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src='./static/img/joewang.png'>
+            <div class="txt">
+                <h2>王志良</h2>
+                <p> 副教授<br> 國立交通大學電子工程博士
+                    <br>
+                    <strong>辦公室：</strong>電子館203研究室<br>
+                    <strong>電話：</strong>02-2908-9899 分機4861<br>
+                    <strong>電子郵件：</strong>joewang@mail.mcut.edu.tw<br>
+                    <strong>學術專長：</strong>半導體材料與元件、光電元件、電子構裝
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- product_introduction -->
+    <div class="product_introduction">
+        <div class="title">
+            <h2 id="introduction">產品介紹</h2>
+            <p class="introduction-txt1">
+                我們使用Anaconda搭載Vscode作為主要開發環境，程式語言為Python並搭載影像視覺庫OpenCV抓取臉部特徵，為了監控方便性，我們架設一個人網站，駕駛人的手機需裝有IP Webcam並啟動內建server，才能與web做連接。技術面使用dlib人臉檢測器之Library，EAR(Eye Aspect Ratio)為引用他人之計算方式，我們比照EAR去計算嘴巴長寬比而得到MAR(Mouth Aspect Ratio)值。我們以眼睛長寬比EAR及嘴巴長寬比MAR作為判斷是否出現打呵欠或打瞌睡的依據，當EAR值低於0.20和MAR值高於2.50時，表示人的精神狀態相當疲憊。
+            </p>
+
+            <p class="introduction-txt2">
+                根據交通部統計，分心駕駛及疲勞駕駛是造成道路交通事故主要原因之一，台灣每年因為駕駛分心或疲勞駕駛，而發生事故比例約占總車禍事故件數的20％，位於各類交通事故原因第二名。顯見疲勞駕駛危險的程度不亞於醉態駕駛，尤其天色昏暗易造成視線不佳，易造成視線死角，精神狀況不佳加上反應時間延長，容易無法注意周遭環境而產生危險。以下是讓受試者根據<strong style="color: #f00;">不同睡眠時間</strong>測試此系統之數據表。</p>
+        </div>
+
+        <!-- table -->
+        <div class="table-title">
+            <ul>
+                <li><i class="fa fa-flask" aria-hidden="true"></i>實驗數據表</li>
+            </ul>
+        </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <th>
+                        <div class="out">
+                            <b>睡眠時間</b>
+                            <em>測試項目</em>
+                        </div>
+                    </th>
+                    <th scope="col">8小時</th>
+                    <th scope="col">6小時</th>
+                    <th scope="col">4小時</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>疲勞次數(次)</strong></td>
+                        <td>5</td>
+                        <td>18</td>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <td><strong>系統辨識良率(%)</strong></td>
+                        <td>11</td>
+                        <td>36</td>
+                        <td>76</td>
+                    </tr>
+                    <tr>
+                        <td><strong>EAR值</strong></td>
+                        <td>0.35</td>
+                        <td>0.27</td>
+                        <td>0.15</td>
+                    </tr>
+                    <tr>
+                        <td><strong>MAR值</strong></td>
+                        <td>1.25</td>
+                        <td>2.50</td>
+                        <td>3.00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>硬體設備</strong></td>
+                        <td colspan="3">
+                            Zenfone3 (機齡約5年)<br> ROG 筆電(機齡約4年)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>網路速度</strong></td>
+                        <td colspan="3">4G吃到飽</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td><strong>備註</strong></td>
+                    <td colspan="3">以上數據經作者同意皆可轉發</td>
+                </tfoot>
+            </table>
+        </div>
+        <div class="table-txt">
+            <p>受試者在睡眠時間只有8小時的時候，EAR和MAR皆符合標準範圍內，數據樣本數為250張，其中有27張為正確辨識疲勞狀態，疲勞辨識率約為11%，非疲勞辨識率約為89%。而受試者在睡眠時間只有4小時的時候，EAR和MAR皆超過判定為疲勞之標準。數據樣本數為250張，其中有154張為正確辨識疲勞狀態，疲勞成功辨識率約為76%，其餘為錯誤辨識數量。
+            </p>
+        </div>
+
+
+        <!-- feature -->
+        <div class="wrap2">
+            <h3>使用教學</h3>
+            <div class="item2">
+                <div class="pic">
+                    <img src='./static/img/demo2.png'>
+                </div>
+                <div class="txt">
+                    <img src="./static/img/one.png" class="one">
+                    <h2>硬體設備需求</h2>
+                    <p>只需要一台桌電或筆電加上一隻手機即可。</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="txt">
+                    <img src="./static/img/two.png" class="two">
+                    <h2>網路通訊服務</h2>
+                    <p>建議使用5G來提升辨識速度，以達成較4G快的網路傳輸畫面，讓此系統之即時性和預防性發揮到極致。</p>
+                </div>
+                <div class="pic">
+                    <img src='./static/img/demo3.png'>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="pic">
+                    <img src='./static/img/demo4.png'>
+                </div>
+                <div class="txt">
+                    <img src="./static/img/three.png" class="three">
+                    <h2>IP Webcam</h2>
+                    <p>請在欲使用此系統之手機安裝好APP。</p>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="txt">
+                    <img src="./static/img/four.png" class="four">
+                    <h2>購買此系統</h2>
+                    <p>立即購買我們的系統，讓我們以預防疲勞駕駛之功用讓您的行車更為安全！</p>
+                </div>
+                <div class="pic">
+                    <img src='./static/img/driver.jpg'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- buy_product -->
+    <div class="buy_product">
+        <a href="./login.html" class="buy_product_btn" style="--x:0"><span id="bottom_btn">購買產品</span></a>
+        <a href="#top" id="bottom"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+    </div>
+
+
+    <!-- footer -->
+    <div class="block footer">
+        Copyright &copy; Drowsiness Detection System<br>All rights reserved. By Andy.
+    </div>
+
+
+
+    <!-- Smooth Scrolling -->
+    <script src="./static/JS/jquery.min.js"></script>
+    <!-- <script src="./JS/headroom.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("header").style.top = "0";
+            } else {
+                document.getElementById("header").style.top = "-120px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+
+</body>
+
+</html>

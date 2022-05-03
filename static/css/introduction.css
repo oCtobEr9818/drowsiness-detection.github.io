@@ -1,0 +1,113 @@
+.product_introduction{
+    background-color: #ddd;
+}
+.title{
+    background-color: #ddd;
+}
+.title #introduction{
+    text-align: center;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-bottom: 50px;
+    margin-top: 200px;
+    padding: 100px 0 0 0;
+}
+.title p{
+    height: 200px;
+    width: 600px;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    padding: 10px;
+    line-height: 1.7;
+    font-weight: 500;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.title .introduction-txt1{
+    padding-bottom: 80px;
+}
+.title .introduction-txt2{
+    padding-bottom: 80px;
+}
+.wrap2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 100px 0;
+    background-color: #fff; 
+}
+.wrap2 h3{
+    margin: 50px 0;
+    font-size: 20px;
+}
+.item2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.item2 h2{
+    font-weight: 1000;
+}
+.item2 p{
+    font-weight: 500;
+}
+.item2 .pic{
+    width: 55%;
+    flex-shrink: 0;
+}
+.item2 .pic img{
+    width: 100%;
+    vertical-align: middle;
+}
+.item2 .txt{
+    width: 655px;
+    height: 175px;
+    flex-shrink: 0;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    position: relative;
+    /* z-index: 1; */
+    text-align: center;
+}
+.item2 .txt .one,
+.item2 .txt .three{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -45px;
+}
+.item2 .txt .two,
+.item2 .txt .four{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -45px;
+}
+.item2 .txt h2{
+    margin-bottom: 10px;
+    font-size: 27px;
+}
+.item2 .txt p{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: auto;
+    text-align: justify;
+    font-weight: 700;
+}
+.item2 > :first-child{        /*  > 選到item第一層的物件 */
+    margin-right: -7%;
+}
+.item2:nth-child(2) .txt{
+    background-color: rgba(240, 174, 193, 0.8);
+}
+.item2:nth-child(3) .txt{
+    background-color: rgba(42, 253, 208, 0.8);
+}
+.item2:nth-child(4) .txt{
+    background-color: rgba(254, 201, 121, 0.8);
+}
+.item2:nth-child(5) .txt{
+    background-color: rgba(149, 219, 214, 0.8);
+}

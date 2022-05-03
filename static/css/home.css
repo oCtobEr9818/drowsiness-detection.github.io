@@ -1,0 +1,217 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Note+Sans+TC:100,300,400,500,700,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+/* header */
+.mainheader {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 120px;
+    transition: top .5s;
+    background: -webkit-linear-gradient(to right, #22b4be, #c0c0aa);
+    background: linear-gradient(to right, #22b4be, #c0c0aa);
+    border-bottom: 1px solid #000;
+}
+
+.mainheader .container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 1400px;
+    margin: auto;
+}
+
+.mainheader .logo {
+    width: 100px;
+    margin-left: -50px;
+}
+
+.mainheader .logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.mainheader .main-nav {
+    display: flex;
+    margin: auto;
+}
+
+.mainheader .main-nav::before {
+    content: '';
+    display: flex;
+    align-items: center;
+    margin-right: 180px;
+}
+
+.mainheader .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 1em;
+    position: relative;
+    transform: translateY(0px);
+    transition: .3s;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.mainheader .main-nav a:hover {
+    transform: translateY(-5px);
+}
+
+.mainheader .main-nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom: 1px solid #fff;
+    transition: .3s;
+}
+
+.mainheader .main-nav a:hover::after {
+    left: 0;
+    right: 0;
+}
+
+.mainheader .header-search {
+    display: flex;
+    width: 190px;
+}
+
+.mainheader .header-search button,
+.mainheader .header-search input {
+    height: 30px;
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+}
+
+.mainheader .header-search button:focus,
+.mainheader .header-search input:focus {
+    outline: none;
+}
+
+.mainheader .header-search button {
+    border-radius: 0 200px 200px 0;
+}
+
+.mainheader .header-search input {
+    border-radius: 200px 0 0 200px;
+}
+
+
+/* bread */
+.wrap-bread {
+    padding: 10px 0;
+}
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.breadcrumb li {
+    position: relative;
+    padding: 6px 8px;
+}
+
+.breadcrumb li+li::before {
+    content: '>';
+    color: #000;
+    position: absolute;
+    left: 0;
+}
+
+.breadcrumb li:last-child a {
+    color: #f00;
+    padding-left: 5px;
+    font-weight: 500;
+}
+
+
+/* body */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5)), url("../img/shibua_gif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 100px;
+}
+
+.container-banner {
+    width: 1400px;
+    height: 100%;
+    margin: auto;
+}
+
+.banner-txt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('../img/shibua_gif.gif');
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px #000;
+    letter-spacing: 0.5px;
+    color: transparent;
+}
+
+.banner-txt h1 {
+    font-size: 50px;
+    border-bottom: 1px solid #333;
+    font-weight: 900;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+    text-align: center;
+}
+
+.banner-txt h1 small {
+    display: block;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.banner-txt p {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+/* footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    background-color: #f7f7f7;
+    padding: 20px 0;
+}

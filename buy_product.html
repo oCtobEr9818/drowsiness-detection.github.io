@@ -1,0 +1,376 @@
+<!-- 購買產品 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drowsiness Detection System</title>
+    <link rel="icon"
+        href="./static/img/logo.png">
+    <style>
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        /* header */
+        .mainheader {
+            height: 120px;
+            background: -webkit-linear-gradient(to right, #22b4be, #c0c0aa);
+            background: linear-gradient(to right, #22b4be, #c0c0aa);
+            position: relative;
+            border-bottom: 1px solid #aaa;
+            box-shadow: 0px 0px 0px 3px #ccc;
+        }
+
+        .mainheader .container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            width: 1400px;
+            margin: auto;
+        }
+
+        .mainheader .logo {
+            width: 100px;
+            margin-left: -50px;
+        }
+
+        .mainheader .logo img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        .mainheader .main-nav {
+            display: flex;
+            margin: auto;
+        }
+
+        .mainheader .main-nav::before {
+            content: '';
+            display: flex;
+            align-items: center;
+            margin-right: 260px;
+        }
+
+        .mainheader .main-nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 5px 1em;
+            position: relative;
+            transform: translateY(0px);
+            transition: .3s;
+            font-size: 17px;
+        }
+
+        .mainheader .main-nav a:hover {
+            transform: translateY(-5px);
+        }
+
+        .mainheader .main-nav a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: -5px;
+            height: 0;
+            border-bottom: 1px solid #fff;
+            transition: .3s;
+        }
+
+        .mainheader .main-nav a:hover::after {
+            left: 0;
+            right: 0;
+        }
+
+        .mainheader .header-search {
+            display: flex;
+            width: 190px;
+        }
+
+        .mainheader .fa-sign-out {
+            color: #fff;
+            font-size: 17px;
+        }
+
+        .mainheader .logout {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 17px;
+            margin-right: 30px;
+            cursor: pointer;
+        }
+
+        .mainheader .logout:focus {
+            /*清除input點擊後的border*/
+            outline: none;
+        }
+
+        .mainheader .header-search button,
+        .mainheader .header-search input {
+            height: 30px;
+            border: none;
+            background-color: #fff;
+            padding: 5px;
+        }
+
+        .mainheader .header-search button:focus,
+        .mainheader .header-search input:focus {
+            outline: none;
+        }
+
+        .mainheader .header-search button {
+            border-radius: 0 200px 200px 0;
+        }
+
+        .mainheader .header-search input {
+            border-radius: 200px 0 0 200px;
+        }
+
+        .mainheader .header-search .fa-search {
+            cursor: pointer;
+        }
+
+        /* bread */
+        .wrap-bread {
+            padding: 10px 0;
+            background-color: #fff;
+        }
+
+        .breadcrumb {
+            display: flex;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .breadcrumb li {
+            position: relative;
+            padding: 6px 8px;
+        }
+
+        .breadcrumb li+li::before {
+            content: '>';
+            color: #aaa;
+            position: absolute;
+            left: 0;
+        }
+
+        .breadcrumb li:last-child a {
+            color: #f00;
+            padding-left: 5px;
+        }
+
+
+        /* body */
+        .wrap {
+            width: 1400px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .login {
+            width: 500px;
+            height: 400px;
+            background-color: rgba(0, 0, 0, .5);
+            border-radius: 10px;
+            border: 10px solid #fff;
+            box-shadow: 0 0 60px #000;
+            backdrop-filter: blur(5px);
+            margin-top: 50px;
+            cursor: default;
+        }
+
+        .login .form {
+            height: 100%;
+            color: #fff;
+            width: 250px;
+            font-family: 'Noto Sans TC', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+        }
+
+        .login .form h2 {
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #fff;
+            position: absolute;
+            top: 33px;
+            text-align: center;
+        }
+
+        .login .form .item {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login .form .fa-smile-o {
+            font-size: 40px;
+        }
+
+        .login .form label {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+
+        .login .download {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .login .download a {
+            text-decoration: none;
+            padding: 20px 30px;
+            border: 2px solid #fa768c;
+            border-radius: 320px;
+            position: absolute;
+            top: -170px;
+            color: #fa768c;
+            background-color: #f7f7f7;
+            font-weight: 600;
+        }
+
+        .advertisement {
+            position: fixed;
+            right: 8px;
+            top: 200px;
+            border: 1px solid #000;
+        }
+
+        .advertisement img {
+            display: block;
+        }
+
+        .advertisement .fa-times-circle {
+            color: #f00;
+            position: absolute;
+            right: -6px;
+            top: -8px;
+            font-size: 30px;
+        }
+
+        /* footer */
+        .footer {
+            text-align: center;
+            font-size: 15px;
+            background: -webkit-linear-gradient(to right, #22b4be, #c0c0aa);
+            background: linear-gradient(to right, #22b4be, #c0c0aa);
+            padding: 20px 0;
+            border-top: 1px solid #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header class="mainheader">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="./static/img/logo.png"
+                    alt="">
+            </a>
+            <nav class="main-nav">
+                <a href="./home.html">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    首頁
+                </a>
+                <a href="./home.html#staff">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    人員介紹
+                </a>
+                <a href="./home.html#introduction">
+                    <i class="fa fa-car" aria-hidden="true"></i>
+                    產品介紹
+                </a>
+                <a href="./home.html#bottom_btn">
+                    <i class="fa fa-credit-card" aria-hidden="true"></i>
+                    購買產品
+                </a>
+                <a href="./home.html#staff">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    聯絡我們
+                </a>
+            </nav>
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <input type="button" value="登出" class="logout" onclick="location.href='./login.html'">
+            <form class="header-search">
+                <input type="search" name="" id="">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- bread -->
+    <div class="wrap-bread">
+        <ol class="breadcrumb">
+            <li><a href="./home.html">首頁</a></li>
+            <li><a href="./buy_product.html">購買產品</a></li>
+        </ol>
+    </div>
+
+
+    <!-- body -->
+    <div class="wrap">
+        <div class="login">
+            <form action="" class="form">
+                <h2>會員登入</h2>
+                <div class="item">
+                    <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    <label for="">登入成功</label>
+                </div>
+            </form>
+            <div class="download">
+                <a href="https://github.com/oCtobEr9818" target="_blank">下載檔案</a>
+            </div>
+        </div>
+
+        <div class="advertisement">
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
+            <img src='https://picsum.photos/180/370?random=3'>
+        </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="footer">
+        Copyright &copy; Drowsiness Detection System<br>All rights reserved. By Anddy.
+    </div>
+
+    <script type="text/javascript">
+        
+        const advertisement = document.querySelector('.advertisement');
+        const btn = document.querySelector('.fa-times-circle');
+
+        btn.addEventListener('click', () => {
+            advertisement.style.display = "none";
+        });
+    </script>
+
+</body>
+
+</html>
